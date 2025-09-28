@@ -58,7 +58,7 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center lg:space-x-10 md:space-x-6 space-x-5">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -81,7 +81,7 @@ export function Header() {
 
           <div className="hidden md:flex">
             <QuoteModal>
-              <Button className="bg-primary hover:bg-primary/90 text-muted-foreground btn-sweep glow-effect cursor-pointer">
+              <Button className="bg-primary hover:bg-primary/90 text-muted-foreground btn-sweep glow-effect cursor-pointer ml-3">
                 <Sparkles className="h-4 w-4 slow-spin" /> Get a Free Quote
               </Button>
             </QuoteModal>
