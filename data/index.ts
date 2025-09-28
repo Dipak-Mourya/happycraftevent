@@ -1,0 +1,5 @@
+export * from './home-data'
+export * from './about-data'
+export * from './contact-data'
+export * from './gallery-data'
+export * from './services-data'
