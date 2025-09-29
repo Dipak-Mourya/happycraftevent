@@ -41,7 +41,7 @@ export function HeroSection() {
               <div className="text-center mb-8">
                 <Badge
                   variant="default"
-                  className="mb-6 text-sm font-extrabold text-white mx-auto"
+                  className="mb-6 text-sm font-extrabold text-white mx-auto w-fit"
                 >
                   Premium Event Management Across India
                 </Badge>
@@ -184,7 +184,7 @@ export function HeroSection() {
               <div className="text-left animate-slide-in-left">
                 <Badge
                   variant="default"
-                  className="mb-6 text-sm font-extrabold text-white"
+                  className="mb-6 text-sm font-extrabold text-white w-fit"
                 >
                   Premium Event Management Across India
                 </Badge>

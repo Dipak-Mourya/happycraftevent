@@ -222,7 +222,7 @@ export function Footer() {
           <p className="text-white/80 text-sm">
             © {new Date().getFullYear()} HappyCraft Event. All rights reserved.
           </p>
-          <div className="flex space-x-4 mt-4 md:mt-0">
+          <div className="flex space-x-4 mt-4 md:mt-0 lg:mr-16 mr-0">
             <div className="flex space-x-6 font-sans text-sm opacity-90">
               <span className="hover:opacity-100 cursor-auto transition-opacity">
                 Designed & Crafted By{" "}
