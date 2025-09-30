@@ -5,6 +5,7 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { signatureEvents } from "@/data/home-data";
+import Image from "next/image";
 
 export function SignatureEventsSection() {
   return (
@@ -25,9 +26,11 @@ export function SignatureEventsSection() {
             <ScrollReveal key={index} direction="up" delay={index * 100}>
               <Card className="overflow-hidden hover-lift transition-all duration-300 group">
                 <div className="aspect-[4/3] relative overflow-hidden">
-                  <img
+                  <Image
                     src={event.image || "/placeholder.svg"}
                     alt={event.name}
+                    draggable={false}
+                    fill
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

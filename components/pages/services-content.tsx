@@ -46,8 +46,10 @@ export function ServicesContent() {
             </div>
           </div>
         </section>
+      </ScrollReveal>
 
-        {/* Services Grid */}
+      {/* Services Grid */}
+      <ScrollReveal direction="up" delay={200}>
         <section className="py-5">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -100,8 +102,10 @@ export function ServicesContent() {
             </div>
           </div>
         </section>
+      </ScrollReveal>
 
-        {/* Why Choose Us */}
+      {/* Why Choose Us */}
+      <ScrollReveal direction="up" delay={200}>
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -154,8 +158,10 @@ export function ServicesContent() {
             </div>
           </div>
         </section>
+      </ScrollReveal>
+      {/* Empowering Brands Carousel */}
 
-        {/* Empowering Brands Carousel */}
+      <ScrollReveal direction="up" delay={200}>
         <section className="py-8">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -169,9 +175,9 @@ export function ServicesContent() {
             </div>
           </div>
         </section>
-
-        <PartnerSlider />
       </ScrollReveal>
+
+      <PartnerSlider />
     </>
   );
 }
