@@ -1,36 +1,51 @@
-"use client"
-import { Dialog, DialogContent } from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
-import { X, ChevronLeft, ChevronRight } from "lucide-react"
-import Image from "next/image"
+"use client";
+import { Dialog, DialogContent, DialogTitle, DialogDescription, DialogHeader } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 interface GalleryImage {
-  id: number
-  src: string
-  alt: string
-  category: string
-  event: string
-  location: string
-  year: string
+  id: number;
+  src: string;
+  alt: string;
+  category: string;
+  event: string;
+  location: string;
+  year: string;
 }
 
 interface ImageLightboxProps {
-  images: GalleryImage[]
-  currentIndex: number
-  isOpen: boolean
-  onClose: () => void
-  onNext: () => void
-  onPrevious: () => void
+  images: GalleryImage[];
+  currentIndex: number;
+  isOpen: boolean;
+  onClose: () => void;
+  onNext: () => void;
+  onPrevious: () => void;
 }
 
-export function ImageLightbox({ images, currentIndex, isOpen, onClose, onNext, onPrevious }: ImageLightboxProps) {
-  if (!images[currentIndex]) return null
+export function ImageLightbox({
+  images,
+  currentIndex,
+  isOpen,
+  onClose,
+  onNext,
+  onPrevious,
+}: ImageLightboxProps) {
+  if (!images[currentIndex]) return null;
 
-  const currentImage = images[currentIndex]
+  const currentImage = images[currentIndex];
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl w-full p-0 bg-black/95 border-0">
+      <DialogContent className="max-w-4xl w-full p-0 bg-black/95 border-0" showCloseButton={false}>
+        {/* Hidden Accessibility Components */}
+        <DialogTitle className="sr-only">
+          {currentImage.event} - {currentImage.category}
+        </DialogTitle>
+        <DialogDescription className="sr-only">
+          {currentImage.category} event in {currentImage.location}, {currentImage.year}. Image {currentIndex + 1} of {images.length}.
+        </DialogDescription>
+        
         <div className="relative">
           {/* Close Button */}
           <Button
@@ -40,9 +55,7 @@ export function ImageLightbox({ images, currentIndex, isOpen, onClose, onNext, o
             onClick={onClose}
           >
             <X className="h-6 w-6" />
-          </Button>
-
-          {/* Navigation Buttons */}
+          </Button>          {/* Navigation Buttons */}
           {images.length > 1 && (
             <>
               <Button
@@ -79,11 +92,12 @@ export function ImageLightbox({ images, currentIndex, isOpen, onClose, onNext, o
           <div className="p-6 text-white">
             <h3 className="text-xl font-semibold mb-2">{currentImage.event}</h3>
             <p className="text-white/80">
-              {currentImage.category} • {currentImage.location} • {currentImage.year}
+              {currentImage.category} • {currentImage.location} •{" "}
+              {currentImage.year}
             </p>
           </div>
         </div>
       </DialogContent>
     </Dialog>
-  )
+  );
 }

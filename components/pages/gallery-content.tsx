@@ -108,7 +108,7 @@ export function GalleryContent() {
         </section>
 
         {/* Filter Section */}
-        <section className="py-4 bg-white border-b border-muted/20 rounded-2xl">
+        <section className="py-4 bg-white border-b border-muted/20 rounded-2xl container mx-auto">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             {/* Filter Header */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-3">
@@ -297,7 +297,7 @@ export function GalleryContent() {
                     Try adjusting your search criteria or explore our complete
                     gallery.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                  <div className="flex flex-col sm:flex-row gap-3 justify-center mb-28">
                     <Button onClick={resetFilters} className="cursor-pointer">
                       <RotateCcw className="h-4 w-4 mr-2" />
                       Reset All Filters
