@@ -14,17 +14,17 @@ export function AboutContent() {
     <>
       {/* Hero Section */}
       <ScrollReveal direction="up" delay={200}>
-        <section className="relative mt-10 lg:mt-12 bg-gradient-to-br from-background to-muted/30">
+        <section className="relative py-8 lg:py-6 bg-gradient-to-br from-background to-muted/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-4xl mx-auto">
-              <Badge variant="secondary" className="mb-6 text-sm font-medium">
+              <Badge variant="secondary" className="mb-4 text-sm font-medium">
                 About Us
               </Badge>
 
-              <h1 className="text-2xl lg:text-4xl font-bold text-balance mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+              <h1 className="text-2xl lg:text-4xl font-bold text-balance mb-3 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
                 Crafting Extraordinary Experiences Since 2015
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground text-pretty mb-4">
+              <p className="text-lg md:text-xl text-muted-foreground text-pretty mb-0">
                 Happy Craft Event has been at the forefront of event management
                 in India, transforming visions into unforgettable experiences
                 with creativity, precision, and passion.
@@ -36,7 +36,7 @@ export function AboutContent() {
 
       {/* Founder Section */}
       <ScrollReveal direction="up" delay={200}>
-        <section className="py-16">
+        <section className="py-8">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="order-2 lg:order-1">

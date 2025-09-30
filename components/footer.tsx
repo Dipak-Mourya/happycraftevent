@@ -6,11 +6,11 @@ export function Footer() {
   return (
     <footer className="bg-muted-foreground text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2 lg:col-span-2 text-left">
             <div className="text-2xl font-bold mb-4">Happy Craft Event</div>
-            <p className="text-white/80 mb-4 max-w-md">
+            <p className="text-white/80 mb-4 max-w-sm text-sm">
               Where creativity meets perfection — HappyCraft Event crafts
               corporate events that inspire, engage, and delight.
             </p>
@@ -24,8 +24,8 @@ export function Footer() {
                   draggable={false}
                   src="/socials/instagram.png"
                   alt="Instagram"
-                  width={24}
-                  height={24}
+                  width={22}
+                  height={22}
                   className="hover:opacity-80 transition-opacity"
                 />
               </Link>
@@ -38,8 +38,8 @@ export function Footer() {
                   draggable={false}
                   src="/socials/facebook.png"
                   alt="Facebook"
-                  width={24}
-                  height={24}
+                  width={22}
+                  height={22}
                   className="hover:opacity-80 transition-opacity"
                 />
               </Link>
@@ -52,8 +52,8 @@ export function Footer() {
                   draggable={false}
                   src="/socials/pinterest.png"
                   alt="Pinterest"
-                  width={24}
-                  height={24}
+                  width={22}
+                  height={22}
                   className="hover:opacity-80 transition-opacity"
                 />
               </Link>
@@ -66,8 +66,8 @@ export function Footer() {
                   draggable={false}
                   src="/socials/x.png"
                   alt="Twitter/X"
-                  width={24}
-                  height={24}
+                  width={22}
+                  height={22}
                   className="hover:opacity-80 transition-opacity"
                 />
               </Link>
@@ -75,13 +75,13 @@ export function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="text-left text-sm">
-            <h3 className="font-semibold mb-4">Quick Links</h3>
+          <div className="text-left lg:-ml-4">
+            <h3 className="font-semibold mb-4 text-sm">Quick Links</h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="/"
-                  className="text-white/80 hover:text-primary transition-colors"
+                  className="text-white/80 hover:text-primary transition-colors text-sm"
                 >
                   Home
                 </Link>
@@ -89,7 +89,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/about"
-                  className="text-white/80 hover:text-primary transition-colors"
+                  className="text-white/80 hover:text-primary transition-colors text-sm"
                 >
                   About
                 </Link>
@@ -97,7 +97,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/services"
-                  className="text-white/80 hover:text-primary transition-colors"
+                  className="text-white/80 hover:text-primary transition-colors text-sm"
                 >
                   Services
                 </Link>
@@ -105,7 +105,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/gallery"
-                  className="text-white/80 hover:text-primary transition-colors"
+                  className="text-white/80 hover:text-primary transition-colors text-sm"
                 >
                   Gallery
                 </Link>
@@ -113,7 +113,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-white/80 hover:text-primary transition-colors"
+                  className="text-white/80 hover:text-primary transition-colors text-sm"
                 >
                   Contact
                 </Link>
@@ -122,8 +122,8 @@ export function Footer() {
           </div>
 
           {/* Services */}
-          <div className="text-left">
-            <h3 className="font-semibold mb-4">Our Services</h3>
+          <div className="text-left lg:-ml-10">
+            <h3 className="font-semibold mb-4 text-sm">Our Services</h3>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -177,9 +177,36 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Other Brands */}
+          <div className="text-left lg:-ml-8">
+            <h3 className="font-semibold mb-4 text-sm">Our Brands</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  href="https://indiawholesalemarket.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-primary transition-colors block"
+                >
+                  <div className="font-medium text-sm">India Wholesale Market</div>
+                  <div className="text-xs text-white/60 mt-1">B2B Business Platform</div>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/"
+                  className="text-white/80 hover:text-primary transition-colors block"
+                >
+                  <div className="font-medium text-sm">HappyCraft Event</div>
+                  <div className="text-xs text-white/60 mt-1">Event Management</div>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Contact Info */}
-          <div className="text-left">
-            <h3 className="font-semibold mb-4">Contact Info</h3>
+          <div className="text-left lg:-ml-6">
+            <h3 className="font-semibold mb-4 text-sm">Contact Info</h3>
             <div className="space-y-3 text-white/80">
               <div className="flex items-start space-x-3 justify-start">
                 <div className="bg-primary rounded-full p-1 mt-0.5 flex-shrink-0">
@@ -222,7 +249,7 @@ export function Footer() {
           <p className="text-white/80 text-sm">
             © {new Date().getFullYear()} HappyCraft Event. All rights reserved.
           </p>
-          <div className="flex space-x-4 mt-4 md:mt-0 lg:mr-16 mr-0">
+          <div className="flex space-x-4 mt-4 md:mt-0 lg:mr-12 mr-0">
             <div className="flex space-x-6 font-sans text-sm opacity-90">
               <span className="hover:opacity-100 cursor-auto transition-opacity">
                 Designed & Crafted By{" "}

@@ -21,13 +21,13 @@ export function ContactContent() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-8 lg:py-10 bg-gradient-to-br from-background to-muted/30">
+      <section className="relative py-8 lg:py-6 bg-gradient-to-br from-background to-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <Badge variant="secondary" className="mb-4 text-sm font-medium">
               Contact Us
             </Badge>
-            <h1 className="text-2xl lg:text-4xl font-bold text-balance mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+            <h1 className="text-2xl lg:text-4xl font-bold text-balance mb-3 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
               Get in Touch
             </h1>
             <p className="text-base md:text-lg text-muted-foreground text-pretty">
@@ -39,7 +39,7 @@ export function ContactContent() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-10">
+      <section className="py-5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:items-start">
             {/* Contact Information */}
