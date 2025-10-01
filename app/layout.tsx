@@ -1,25 +1,25 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
-import { Analytics } from "@vercel/analytics/next"
-import { Suspense } from "react"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { Toaster } from "@/components/ui/toaster"
-import "./globals.css"
-import WhatsAppButton from "@/components/whatsapp-button"
+import type React from "react";
+import type { Metadata } from "next";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+import { Analytics } from "@vercel/analytics/next";
+import { Suspense } from "react";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { Toaster } from "@/components/ui/toaster";
+import "./globals.css";
+import WhatsAppButton from "@/components/whatsapp-button";
 
 export const metadata: Metadata = {
   title: {
     default: "Happy Craft Event - Top Event Management Company in India",
-    template: "%s | Happy Craft Event"
+    template: "%s | Happy Craft Event",
   },
   description:
     "Begin an extraordinary journey with Happy Craft Event. Design, delight, and inspire with India's premier corporate event management company, where every moment is crafted to perfection.",
   keywords: [
     "event management",
-    "corporate events", 
+    "corporate events",
     "weddings",
     "brand launches",
     "exhibitions",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     "Delhi",
     "Bengaluru",
     "Chennai",
-    "Hyderabad"
+    "Hyderabad",
   ],
   authors: [{ name: "Happy Craft Event", url: "https://happycraftevent.com" }],
   creator: "Happy Craft Event",
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   openGraph: {
@@ -76,24 +76,27 @@ export const metadata: Metadata = {
   verification: {
     google: "your-google-site-verification-code",
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
+        {/* Fallback to logo until proper favicon files are added to /public */}
+        <link rel="icon" href="/logo/hce.png" />
+        <link rel="shortcut icon" href="/logo/hce.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/logo/hce.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/logo/hce.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/logo/hce.png" />
         <meta name="theme-color" content="#000000" />
       </head>
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
+      <body
+        className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}
+      >
         <div className="min-h-screen flex flex-col">
           <Header />
           <main className="flex-1 pt-16">
@@ -106,5 +109,5 @@ export default function RootLayout({
         <WhatsAppButton />
       </body>
     </html>
-  )
+  );
 }

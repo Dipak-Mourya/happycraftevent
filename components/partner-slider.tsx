@@ -1,92 +1,61 @@
-"use client";
+"use client"
 
-import { useEffect, useState } from "react";
-import { ScrollReveal } from "./scroll-reveal";
+import { useEffect, useState } from "react"
+import Image from "next/image"
+import { OurCustomerData } from "@/data"
 
-const partners = [
-  { name: "Microsoft", logo: "🏢" },
-  { name: "Google", logo: "🔍" },
-  { name: "Amazon", logo: "📦" },
-  { name: "Apple", logo: "🍎" },
-  { name: "Meta", logo: "📘" },
-  { name: "Netflix", logo: "🎬" },
-  { name: "Tesla", logo: "⚡" },
-  { name: "Adobe", logo: "🎨" },
-  { name: "Salesforce", logo: "☁️" },
-  { name: "Oracle", logo: "🔶" },
-  { name: "IBM", logo: "💼" },
-  { name: "Intel", logo: "💻" },
-  { name: "Samsung", logo: "📱" },
-  { name: "Sony", logo: "🎵" },
-  { name: "LG", logo: "📺" },
-  { name: "Tata", logo: "🏭" },
-];
 
 export function PartnerSlider() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleCount, setVisibleCount] = useState(6);
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  const visibleCount = 5 // show 5 items at a time
 
   useEffect(() => {
-    const updateVisibleCount = () => {
-      if (window.innerWidth < 768) {
-        setVisibleCount(3); // Mobile: 3 partners
-      } else if (window.innerWidth < 1024) {
-        setVisibleCount(4); // Tablet: 4 partners
-      } else {
-        setVisibleCount(6); // Desktop: 6 partners
-      }
-    };
+    const maxIndex = Math.max(0, OurCustomerData.length - visibleCount)
+    if (maxIndex === 0) return
 
-    updateVisibleCount();
-    window.addEventListener('resize', updateVisibleCount);
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % (maxIndex + 1))
+    }, 3000)
 
-    return () => window.removeEventListener('resize', updateVisibleCount);
-  }, []);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % (partners.length - visibleCount + 1));
-    }, 3000);
-
-    return () => clearInterval(timer);
-  }, [visibleCount]);
+    return () => clearInterval(interval)
+  }, [visibleCount])
 
   return (
-    <ScrollReveal direction="up" delay={200}>
-      <div className="w-full overflow-hidden bg-muted/30 py-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-center text-2xl font-bold mb-8 text-muted-foreground">
-            Trusted by Leading Brands
-          </h3>
+    <section className="py-16 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="font-serif font-bold text-3xl md:text-4xl text-foreground mb-4">Our Trusted Partners</h2>
+          <p className="font-sans text-sm md:text-base lg:text-lg text-muted-foreground">Trusted by leading organizations</p>
+        </div>
 
-          <div className="relative overflow-hidden">
-            <div
-              className="flex transition-transform duration-1000 ease-in-out"
-              style={{ 
-                transform: `translateX(-${currentIndex * (100 / visibleCount)}%)` 
-              }}
-            >
-              {partners.map((partner, index) => (
-                <div
-                  key={`${partner.name}-${index}`}
-                  className="flex-shrink-0 w-1/3 md:w-1/4 lg:w-1/6 px-2 md:px-3 lg:px-4"
-                >
-                  <div className="flex flex-col items-center justify-center p-4 md:p-5 lg:p-6 rounded-lg bg-card hover:bg-card/80 transition-all duration-300 hover-lift group">
-                    <div className="text-2xl md:text-3xl lg:text-4xl mb-2 group-hover:scale-110 transition-transform duration-300">
-                      {partner.logo}
-                    </div>
-                    <div className="text-xs md:text-sm font-semibold text-muted-foreground group-hover:text-foreground transition-colors text-center">
-                      {partner.name}
-                    </div>
-                  </div>
+        <div className="overflow-hidden">
+          <div
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${currentIndex * (100 / visibleCount)}%)` }}
+          >
+            {OurCustomerData.map((media, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 px-4"
+                style={{ width: `${100 / visibleCount}%` }}
+              >
+                <div className="flex items-center justify-center h-20 bg-muted/30 rounded-lg">
+                  <Image
+                    src={media.logo || "/fallback/placeholder.svg"}
+                    alt={media.name}
+                    width={68}
+                    height={68}
+                    className="max-h-14 max-w-full object-contain opacity-100 hover:opacity-100 transition-opacity cursor-pointer"
+                    draggable={false}
+                    loading="lazy"
+                  />
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-
-         
         </div>
       </div>
-    </ScrollReveal>
-  );
+    </section>
+  )
 }

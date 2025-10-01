@@ -41,7 +41,7 @@ export function HeroSection() {
               <div className="text-center mb-8">
                 <Badge
                   variant="default"
-                  className="mb-6 text-sm font-extrabold text-white mx-auto w-fit"
+                  className="mb-6 text-sm font-medium text-white mx-auto w-fit"
                 >
                   Premium Event Management Across India
                 </Badge>
@@ -81,7 +81,7 @@ export function HeroSection() {
                   <div className="w-32 h-40 bg-white p-1.5 rounded-lg shadow-xl transform rotate-2 hover:rotate-0 transition-all duration-500 hover:scale-105 animate-[sway_2.5s_ease-in-out_infinite]">
                     <div className="w-full h-full rounded overflow-hidden">
                       <Image
-                        src="/professional-corporate-event-conference.jpg"
+                        src="/home/hanger/h1.jpg"
                         alt="Professional corporate event"
                         fill
                         className="object-cover hover:scale-110 transition-transform duration-500"
@@ -104,7 +104,7 @@ export function HeroSection() {
                   <div className="w-32 h-40 bg-white p-1.5 rounded-lg shadow-xl transform -rotate-3 hover:rotate-0 transition-all duration-500 hover:scale-105 animate-[gentleSway_3s_ease-in-out_infinite_0.5s]">
                     <div className="w-full h-full rounded overflow-hidden">
                       <Image
-                        src="/luxury-wedding-mandap-decoration.jpg"
+                        src="/home/hanger/h2.jpg"
                         alt="Luxury wedding decoration"
                         fill
                         className="object-cover hover:scale-110 transition-transform duration-500"
@@ -128,7 +128,7 @@ export function HeroSection() {
                   <div className="w-28 h-36 bg-white p-1.5 rounded-lg shadow-xl transform rotate-1 hover:rotate-0 transition-all duration-500 hover:scale-105 animate-[slowSway_3.5s_ease-in-out_infinite_1s]">
                     <div className="w-full h-full rounded overflow-hidden">
                       <Image
-                        src="/tech-conference-modern-stage.jpg"
+                        src="/home/hanger/h3.jpg"
                         alt="Tech conference stage"
                         fill
                         className="object-cover hover:scale-110 transition-transform duration-500"
@@ -151,7 +151,7 @@ export function HeroSection() {
                   <div className="w-28 h-36 bg-white p-1.5 rounded-lg shadow-xl transform -rotate-2 hover:rotate-0 transition-all duration-500 hover:scale-105 animate-[subtleSway_2.8s_ease-in-out_infinite_1.5s]">
                     <div className="w-full h-full rounded overflow-hidden">
                       <Image
-                        src="/elegant-brand-launch-event-stage.jpg"
+                        src="/home/hanger/h4.jpg"
                         alt="Brand launch event"
                         fill
                         className="object-cover hover:scale-110 transition-transform duration-500"
@@ -184,7 +184,7 @@ export function HeroSection() {
               <div className="text-left animate-slide-in-left">
                 <Badge
                   variant="default"
-                  className="mb-6 text-sm font-extrabold text-white w-fit"
+                  className="mb-6 text-sm font-medium text-white w-fit"
                 >
                   Premium Event Management Across India
                 </Badge>
@@ -199,9 +199,9 @@ export function HeroSection() {
                 <p className="text-lg xl:text-xl text-muted-foreground text-pretty mb-8">
                   From high-profile brand launches and celebrity-studded galas
                   to immersive exhibitions and bespoke stall setups in luxury
-                  hotels, HappyCraft Events delivers world-class event
-                  experiences. We blend creativity, precision, and hospitality
-                  excellence to make every occasion unforgettable.
+                  hotels, HappyCraft Events delivers exceptional event
+                  experiences across India. We blend creativity, precision, and
+                  hospitality excellence to make every occasion unforgettable.
                 </p>
                 <Link href="/contact">
                   <Button
@@ -232,7 +232,7 @@ export function HeroSection() {
                   <div className="w-40 h-48 xl:w-44 xl:h-52 bg-white p-2 rounded-lg shadow-2xl transform rotate-2 hover:rotate-0 transition-all duration-500 hover:scale-105 animate-[sway_2.5s_ease-in-out_infinite]">
                     <div className="w-full h-full rounded overflow-hidden">
                       <Image
-                        src="/professional-corporate-event-conference.jpg"
+                        src="/home/hanger/h1.jpg"
                         alt="Professional corporate event"
                         fill
                         className="object-cover hover:scale-110 transition-transform duration-500"
@@ -255,7 +255,7 @@ export function HeroSection() {
                   <div className="w-40 h-48 xl:w-44 xl:h-52 bg-white p-2 rounded-lg shadow-2xl transform -rotate-3 hover:rotate-0 transition-all duration-500 hover:scale-105 animate-[gentleSway_3s_ease-in-out_infinite_0.5s]">
                     <div className="w-full h-full rounded overflow-hidden">
                       <Image
-                        src="/luxury-wedding-mandap-decoration.jpg"
+                        src="/home/hanger/h2.jpg"
                         alt="Luxury wedding decoration"
                         fill
                         className="object-cover hover:scale-110 transition-transform duration-500"
@@ -279,7 +279,7 @@ export function HeroSection() {
                   <div className="w-38 h-46 xl:w-42 xl:h-50 bg-white p-2 rounded-lg shadow-2xl transform rotate-1 hover:rotate-0 transition-all duration-500 hover:scale-105 animate-[slowSway_3.5s_ease-in-out_infinite_1s]">
                     <div className="w-full h-full rounded overflow-hidden">
                       <Image
-                        src="/tech-conference-modern-stage.jpg"
+                        src="/home/hanger/h3.jpg"
                         alt="Tech conference stage"
                         fill
                         className="object-cover hover:scale-110 transition-transform duration-500"
@@ -302,7 +302,7 @@ export function HeroSection() {
                   <div className="w-38 h-46 xl:w-42 xl:h-50 bg-white p-2 rounded-lg shadow-2xl transform -rotate-2 hover:rotate-0 transition-all duration-500 hover:scale-105 animate-[subtleSway_2.8s_ease-in-out_infinite_1.5s]">
                     <div className="w-full h-full rounded overflow-hidden">
                       <Image
-                        src="/elegant-brand-launch-event-stage.jpg"
+                        src="/home/hanger/h4.jpg"
                         alt="Brand launch event"
                         fill
                         className="object-cover hover:scale-110 transition-transform duration-500"
@@ -318,25 +318,25 @@ export function HeroSection() {
         </div>
         {/* Scroll Down Indicator */}
         <ScrollReveal direction="right" delay={200}>
-        <div className="mt-8 flex flex-col items-center">
-          <div className="text-2xl font-bold text-primary animate-pulse mb-2">
-            ↓
+          <div className="mt-8 flex flex-col items-center">
+            <div className="text-2xl font-bold text-primary animate-pulse mb-2">
+              ↓
+            </div>
+            <p className="text-sm font-semibold text-gray-600  tracking-wider">
+              Scroll Down
+            </p>
           </div>
-          <p className="text-sm font-semibold text-gray-600  tracking-wider">
-            Scroll Down
-          </p>
-        </div>
         </ScrollReveal>
       </section>
-      <section className="py-12">
+      <section className="py-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal direction="up" className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-muted-foreground">
               Our Event Expertise
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              From corporate gatherings to dream weddings, we bring your vision
-              to life with unmatched creativity and precision.
+               We specialize in turning ideas into unforgettable events—from
+              exhibitions and seminars to artist-led celebrations and weddings
             </p>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={200}>

@@ -15,10 +15,10 @@ export function ServiceLocationsSection() {
               Exceptional Events Across India
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Delivered exceptional events in 12+ cities including Kolkata,
-              Mumbai, Bengaluru, New Delhi, Chennai, Hyderabad, and more. Our
-              nationwide presence ensures consistent quality and local
-              expertise wherever your event takes place.
+              Delivered exceptional events across 10+ major cities — spanning
+              North, South, East, West, and Central India. Our pan-India
+              presence ensures consistent quality, seamless execution, and deep
+              local expertise—wherever your event takes place.
             </p>
             <div className="grid grid-cols-2 gap-4 text-sm">
               {servicesCities.map((city, index) => (
@@ -37,9 +37,9 @@ export function ServiceLocationsSection() {
             <ScrollReveal direction="right" delay={200}>
               <div className="flex justify-center max-w-full h-auto">
                 <Image
-                  src="/india-map-with-city-markers-dark-theme.jpg"
+                  src="home/other/map.png"
                   alt="India map showing our service locations"
-                  className="rounded-lg shadow-lg hover-scale w-full h-auto"
+                  className="rounded-lg shadow-lg scale-105 hover:scale-107 w-full h-auto"
                   draggable={false}
                   loading="lazy"
                   width={500}

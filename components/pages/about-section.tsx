@@ -13,7 +13,7 @@ export function AboutSection() {
           <div className="overflow-hidden">
             <ScrollReveal direction="left">
               <Image
-                src="/professional-event-team-working-setup.jpg"
+                src="home/other/about.jpeg"
                 alt="Happy Craft Event team at work"
                 className="rounded-lg shadow-lg hover-scale w-full h-auto"
                 width={500}
