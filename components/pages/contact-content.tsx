@@ -9,9 +9,7 @@ import {
   Phone,
   Clock,
   Instagram,
-  Linkedin,
   Facebook,
-  MessageCircle,
   X,
 } from "lucide-react";
 import { contactInfo } from "@/data/contact-data";
