@@ -236,10 +236,10 @@ export function Footer() {
                   <Mail className="h-3 w-3 text-primary-foreground" />
                 </div>
                 <Link
-                  href="mailto:hello@one8event.com"
+                  href="mailto:happycraftevents@gmail.com"
                   className="text-sm hover:text-primary transition-colors"
                 >
-                  hello@one8event.com
+                  happycraftevents@gmail.com
                 </Link>
               </div>
 
@@ -248,10 +248,10 @@ export function Footer() {
                   <Phone className="h-3 w-3 text-primary-foreground" />
                 </div>
                 <Link
-                  href="tel:+919800821100"
+                  href="tel:+919903622236"
                   className="text-sm hover:text-primary transition-colors"
                 >
-                  +91 9800 821100
+                  +91 99036 22236
                 </Link>
               </div>
             </div>
