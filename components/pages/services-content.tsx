@@ -46,10 +46,7 @@ export function ServicesContent() {
             </div>
           </div>
         </section>
-      </ScrollReveal>
 
-      {/* Services Grid */}
-      <ScrollReveal direction="up" delay={200}>
         <section className="py-5">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
