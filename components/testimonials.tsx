@@ -5,48 +5,19 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollReveal } from "./scroll-reveal";
-
-interface Testimonial {
-  id: number;
-  name: string;
-  title: string;
-  company: string;
-  content: string;
-  rating: number;
-}
-
-const testimonials: Testimonial[] = [
-  {
-    id: 1,
-    name: "Rajesh Kumar",
-    title: "CEO",
-    company: "Tech Innovations Ltd",
-    content:
-      "Happy Craft Event transformed our annual conference into an unforgettable experience. Their attention to detail and professional execution exceeded our expectations.",
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: "Priya Sharma",
-    title: "Marketing Director",
-    company: "Global Solutions Inc",
-    content:
-      "The team at Happy Craft Event delivered a flawless product launch event. Every aspect was perfectly coordinated, from venue setup to guest management.",
-    rating: 3,
-  },
-  {
-    id: 3,
-    name: "Amit Patel",
-    title: "Founder",
-    company: "StartUp Hub",
-    content:
-      "Outstanding service and creativity! They brought our vision to life and created an event that our guests are still talking about months later.",
-    rating: 4,
-  },
-];
+import { testimonials } from "@/data/testimonial-data";
 
 export function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const getInitials = (name: string) => {
+    if (!name) return "";
+    const parts = name.trim().split(/\s+/);
+    if (parts.length >= 2) {
+      return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+    }
+    return name.slice(0, 2).toUpperCase();
+  };
 
   const goToPrevious = () => {
     setCurrentIndex(
@@ -77,13 +48,19 @@ export function Testimonials() {
           <div className="max-w-4xl mx-auto">
             <Card className="relative">
               <CardContent className="p-8 md:p-12 text-center">
-                <div className="flex justify-center mb-6">
-                  {[...Array(currentTestimonial.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-5 w-5 fill-amber-400 text-secondary"
-                    />
-                  ))}
+                <div className="flex flex-col items-center mb-6">
+                  <div className="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center text-lg font-bold mb-3">
+                    {getInitials(currentTestimonial.name)}
+                  </div>
+
+                  <div className="flex">
+                    {[...Array(currentTestimonial.rating)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className="h-5 w-5 fill-amber-400 text-secondary"
+                      />
+                    ))}
+                  </div>
                 </div>
 
                 <blockquote className="text-lg md:text-xl text-muted-foreground mb-8 italic">
@@ -93,9 +70,6 @@ export function Testimonials() {
                 <div>
                   <div className="font-semibold text-lg">
                     {currentTestimonial.name}
-                  </div>
-                  <div className="text-muted-foreground">
-                    {currentTestimonial.title}, {currentTestimonial.company}
                   </div>
                 </div>
               </CardContent>

@@ -6,7 +6,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 
 interface FormData {
@@ -24,9 +30,9 @@ interface FormErrors {
   service?: string;
   message?: string;
 }
- interface ContactFormProps {
-    SubmitButtonText: string;
- }
+interface ContactFormProps {
+  SubmitButtonText: string;
+}
 export function ContactForm({ SubmitButtonText }: ContactFormProps) {
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -35,20 +41,19 @@ export function ContactForm({ SubmitButtonText }: ContactFormProps) {
     service: "",
     message: "",
   });
-  
+
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   const serviceOptions = [
-    "Event Management",
     "Wedding Planning",
+    "Pre-Wedding Shoots",
     "Corporate Events",
-    "Brand Launch",
-    "Exhibition & Trade Shows",
-    "Conference & Seminars",
-    "Product Launch",
-    "Other"
+    "Conferences & Seminars",
+    "Product Launches",
+    "Artist Management",
+    "Other Customized Event Solutions",
   ];
 
   const validateForm = (): boolean => {
@@ -71,7 +76,9 @@ export function ContactForm({ SubmitButtonText }: ContactFormProps) {
     // Phone validation
     if (!formData.phone.trim()) {
       newErrors.phone = "Phone number is required";
-    } else if (!/^[\+]?[1-9][\d]{9,14}$/.test(formData.phone.replace(/\s/g, ""))) {
+    } else if (
+      !/^[\+]?[1-9][\d]{9,14}$/.test(formData.phone.replace(/\s/g, ""))
+    ) {
       newErrors.phone = "Please enter a valid phone number";
     }
 
@@ -93,7 +100,7 @@ export function ContactForm({ SubmitButtonText }: ContactFormProps) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
@@ -101,27 +108,49 @@ export function ContactForm({ SubmitButtonText }: ContactFormProps) {
     setIsSubmitting(true);
 
     try {
-      // Log form data to console
-      console.log("Form submitted with data:", formData);
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-
-      toast({
-        title: "Message Sent Successfully!",
-        description: "We'll get back to you within 24 hours. Thank you for reaching out!",
-        variant: "success"
+      // Submit to Web3Forms API
+      const resp = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          access_key: "0ff075dc-bcae-4fd7-bald-d30a4995e66f",
+          subject: "New Event Proposal Submission",
+          botcheck: "",
+        }),
       });
 
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        service: "",
-        message: "",
-      });
-      setErrors({});
+      const json = await resp.json();
+
+      if (resp.ok) {
+        toast({
+          title: "Message Sent Successfully!",
+          description:
+            json.message ||
+            "We'll get back to you within 24 hours. Thank you for reaching out!",
+          variant: "success",
+        });
+
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          message: "",
+        });
+        setErrors({});
+      } else {
+        toast({
+          title: "Error",
+          description:
+            json.message || "Something went wrong. Please try again.",
+          variant: "destructive",
+        });
+      }
     } catch (error) {
       toast({
         title: "Error",
@@ -133,16 +162,18 @@ export function ContactForm({ SubmitButtonText }: ContactFormProps) {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
-    
+
     // Clear error when user starts typing
     if (errors[name as keyof FormErrors]) {
-      setErrors(prev => ({
+      setErrors((prev) => ({
         ...prev,
         [name]: undefined,
       }));
@@ -150,14 +181,14 @@ export function ContactForm({ SubmitButtonText }: ContactFormProps) {
   };
 
   const handleServiceChange = (value: string) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       service: value,
     }));
-    
+
     // Clear error when user selects a service
     if (errors.service) {
-      setErrors(prev => ({
+      setErrors((prev) => ({
         ...prev,
         service: undefined,
       }));
@@ -181,7 +212,10 @@ export function ContactForm({ SubmitButtonText }: ContactFormProps) {
         <CardTitle>Send us a Message</CardTitle>
       </CardHeader>
       <CardContent className="flex-1 flex flex-col">
-        <form onSubmit={handleSubmit} className="space-y-4 flex-1 flex flex-col">
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-4 flex-1 flex flex-col"
+        >
           <div className="space-y-2">
             <Label htmlFor="name">Name *</Label>
             <Input
@@ -192,7 +226,9 @@ export function ContactForm({ SubmitButtonText }: ContactFormProps) {
               placeholder="Your full name"
               className={errors.name ? "border-red-500" : ""}
             />
-            {errors.name && <p className="text-sm text-red-500">{errors.name}</p>}
+            {errors.name && (
+              <p className="text-sm text-red-500">{errors.name}</p>
+            )}
           </div>
 
           <div className="space-y-2">
@@ -206,7 +242,9 @@ export function ContactForm({ SubmitButtonText }: ContactFormProps) {
               placeholder="your.email@example.com"
               className={errors.email ? "border-red-500" : ""}
             />
-            {errors.email && <p className="text-sm text-red-500">{errors.email}</p>}
+            {errors.email && (
+              <p className="text-sm text-red-500">{errors.email}</p>
+            )}
           </div>
 
           <div className="space-y-2">
@@ -219,14 +257,24 @@ export function ContactForm({ SubmitButtonText }: ContactFormProps) {
               placeholder="+91 XXXXX XXXXX"
               className={errors.phone ? "border-red-500" : ""}
             />
-            {errors.phone && <p className="text-sm text-red-500">{errors.phone}</p>}
+            {errors.phone && (
+              <p className="text-sm text-red-500">{errors.phone}</p>
+            )}
           </div>
 
           <div className="space-y-2 w-full">
             <Label htmlFor="service">Service Required *</Label>
-            <Select value={formData.service} onValueChange={handleServiceChange} >
-              <SelectTrigger className={errors.service ? "border-red-500 w-full" : "w-full"}>
-                <SelectValue placeholder="Select a service" className="w-full"/>
+            <Select
+              value={formData.service}
+              onValueChange={handleServiceChange}
+            >
+              <SelectTrigger
+                className={errors.service ? "border-red-500 w-full" : "w-full"}
+              >
+                <SelectValue
+                  placeholder="Select a service"
+                  className="w-full"
+                />
               </SelectTrigger>
               <SelectContent>
                 {serviceOptions.map((service) => (
@@ -236,7 +284,9 @@ export function ContactForm({ SubmitButtonText }: ContactFormProps) {
                 ))}
               </SelectContent>
             </Select>
-            {errors.service && <p className="text-sm text-red-500">{errors.service}</p>}
+            {errors.service && (
+              <p className="text-sm text-red-500">{errors.service}</p>
+            )}
           </div>
 
           <div className="space-y-2">
@@ -247,10 +297,14 @@ export function ContactForm({ SubmitButtonText }: ContactFormProps) {
               value={formData.message}
               onChange={handleChange}
               rows={3}
-              className={`resize-none ${errors.message ? "border-red-500" : ""}`}
+              className={`resize-none ${
+                errors.message ? "border-red-500" : ""
+              }`}
               placeholder="Type your message..."
             />
-            {errors.message && <p className="text-sm text-red-500">{errors.message}</p>}
+            {errors.message && (
+              <p className="text-sm text-red-500">{errors.message}</p>
+            )}
           </div>
 
           <div className="flex gap-3 pt-2">

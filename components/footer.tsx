@@ -9,14 +9,28 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2 lg:col-span-2 text-left">
-            <div className="text-2xl font-bold mb-4">Happy Craft Event</div>
+            <div className="flex items-center space-x-3 mb-4">
+              <Image
+                draggable={false}
+                src="/logo/hce.png"
+                alt="HappyCraft Logo"
+                width={60}
+                height={60}
+                className="object-contain"
+                priority
+              />
+              <div className="text-xl font-bold text-white">
+                HappyCraft Event
+              </div>
+            </div>
             <p className="text-white/80 mb-4 max-w-sm text-sm">
-              Where creativity meets perfection — HappyCraft Event crafts
-              corporate events that inspire, engage, and delight.
+              Where creativity meets perfection — HappyCraft Events crafts
+              experiences that inspire, engage, and delight.
             </p>
             <div className="flex space-x-4 justify-start">
               <Link
-                href="#"
+                href="https://www.instagram.com/_happycraftevents_/"
+                target="_blank"
                 className="hover:scale-110 transition-transform duration-200"
                 title="Instagram"
               >
@@ -30,7 +44,8 @@ export function Footer() {
                 />
               </Link>
               <Link
-                href="#"
+                href="https://www.facebook.com/p/Happycraft-Hospitality-And-Events-100063680694373/"
+                target="_blank"
                 className="hover:scale-110 transition-transform duration-200"
                 title="Facebook"
               >
@@ -44,28 +59,18 @@ export function Footer() {
                 />
               </Link>
               <Link
-                href="#"
+                href={`https://wa.me/+919903622236?text=${encodeURIComponent(
+                  "Hello, I would like to enquire about your event services."
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:scale-110 transition-transform duration-200"
-                title="Pinterest"
+                title="WhatsApp"
               >
                 <Image
                   draggable={false}
-                  src="/socials/pinterest.png"
-                  alt="Pinterest"
-                  width={22}
-                  height={22}
-                  className="hover:opacity-80 transition-opacity"
-                />
-              </Link>
-              <Link
-                href="#"
-                className="hover:scale-110 transition-transform duration-200"
-                title="Twitter"
-              >
-                <Image
-                  draggable={false}
-                  src="/socials/x.png"
-                  alt="Twitter/X"
+                  src="/socials/whatsapp.png"
+                  alt="WhatsApp"
                   width={22}
                   height={22}
                   className="hover:opacity-80 transition-opacity"
@@ -130,7 +135,7 @@ export function Footer() {
                   href="/services"
                   className="text-white/80 hover:text-primary transition-colors text-sm"
                 >
-                  Event Management
+                  Product Launches
                 </Link>
               </li>
               <li>
@@ -146,25 +151,18 @@ export function Footer() {
                   href="/services"
                   className="text-white/80 hover:text-primary transition-colors text-sm"
                 >
+                  Pre-Wedding Shoots
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-white/80 hover:text-primary transition-colors text-sm"
+                >
                   Corporate Events
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="text-white/80 hover:text-primary transition-colors text-sm"
-                >
-                  Brand Launch
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="text-white/80 hover:text-primary transition-colors text-sm"
-                >
-                  Exhibition & Trade Shows
-                </Link>
-              </li>
+
               <li>
                 <Link
                   href="/services"
@@ -173,7 +171,14 @@ export function Footer() {
                   Conference & Seminars
                 </Link>
               </li>
-             
+              <li>
+                <Link
+                  href="/services"
+                  className="text-white/80 hover:text-primary transition-colors text-sm"
+                >
+                  Artist Management
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -188,8 +193,12 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="text-white/80 hover:text-primary transition-colors block"
                 >
-                  <div className="font-medium text-sm">India Wholesale Market</div>
-                  <div className="text-xs text-white/60 mt-1">B2B Business Platform</div>
+                  <div className="font-medium text-sm">
+                    India Wholesale Market
+                  </div>
+                  <div className="text-xs text-white/60 mt-1">
+                    B2B Business Platform
+                  </div>
                 </Link>
               </li>
               <li>
@@ -198,7 +207,9 @@ export function Footer() {
                   className="text-white/80 hover:text-primary transition-colors block"
                 >
                   <div className="font-medium text-sm">HappyCraft Event</div>
-                  <div className="text-xs text-white/60 mt-1">Event Management</div>
+                  <div className="text-xs text-white/60 mt-1">
+                    Event Management
+                  </div>
                 </Link>
               </li>
             </ul>
@@ -213,8 +224,10 @@ export function Footer() {
                   <MapPin className="h-3 w-3 text-primary-foreground" />
                 </div>
                 <div className="text-sm text-left">
-                  <p>Shakespeare 9th Floor, Ps Arcadia Central
-                  4A, Camac St, Elgin, Kolkata, WB 700017</p>
+                  <p>
+                    Shakespeare 9th Floor, Ps Arcadia Central 4A, Camac St,
+                    Elgin, Kolkata, WB 700017
+                  </p>
                 </div>
               </div>
 
@@ -223,10 +236,10 @@ export function Footer() {
                   <Mail className="h-3 w-3 text-primary-foreground" />
                 </div>
                 <Link
-                  href="mailto:hello@one8event.com"
+                  href="mailto:happycraftevents@gmail.com"
                   className="text-sm hover:text-primary transition-colors"
                 >
-                  hello@one8event.com
+                  happycraftevents@gmail.com
                 </Link>
               </div>
 
@@ -235,10 +248,10 @@ export function Footer() {
                   <Phone className="h-3 w-3 text-primary-foreground" />
                 </div>
                 <Link
-                  href="tel:+919800821100"
+                  href="tel:+919903622236"
                   className="text-sm hover:text-primary transition-colors"
                 >
-                  +91 9800 821100
+                  +91 99036 22236
                 </Link>
               </div>
             </div>

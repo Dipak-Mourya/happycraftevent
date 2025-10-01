@@ -3,31 +3,32 @@ export const carouselItems = [
     id: 1,
     title: "Corporate Events",
     description: "Professional corporate gatherings that inspire and engage",
-    image: "/professional-corporate-event-conference.jpg",
+    image: "home/expertise/e1.jpg",
     type: "Corporate",
   },
   {
     id: 2,
-    title: "Brand Launches",
+    title: "Product Launches",
     description: "Memorable product launches that create lasting impressions",
-    image: "/elegant-brand-launch-event-stage.jpg",
-    type: "Brand Launch",
+    image: "home/expertise/e2.jpg",
+    type: "Product Launch",
   },
   {
     id: 3,
-    title: "Weddings",
-    description: "Magical wedding celebrations crafted to perfection",
-    image: "/beautiful-wedding-ceremony-decoration.jpg",
-    type: "Wedding",
+    title: "Artist Management",
+    description:
+      "Seamless coordination and curation of celebrity and artist appearances",
+    image: "home/expertise/e3.jpg",
+    type: "Artist Management",
   },
   {
     id: 4,
-    title: "Exhibitions",
-    description: "Dynamic expo stalls and exhibition experiences",
-    image: "/modern-exhibition-booth-design.jpg",
-    type: "Exhibition",
+    title: "Weddings",
+    description: "Magical wedding celebrations crafted to perfection",
+    image: "home/expertise/e4.jpg",
+    type: "Wedding",
   },
-]
+];
 
 export const signatureEvents = [
   {
@@ -48,7 +49,7 @@ export const signatureEvents = [
     name: "Product Launch Gala",
     location: "Bengaluru",
     date: "January 2024",
-    type: "Brand Launch",
+    type: "Product Launch",
     image: "/tech-conference-modern-stage.jpg",
   },
   {
@@ -86,13 +87,15 @@ export const signatureEvents = [
     type: "Social Event",
     image: "/tech-conference-modern-stage.jpg",
   },
-]
+];
 
 export const servicesCities = [
   "Kolkata",
-  "Mumbai", 
+  "Mumbai",
   "Bengaluru",
   "New Delhi",
   "Chennai",
-  "Hyderabad"
-]
+  "Hyderabad",
+  "Pune",
+  "Jaipur",
+];

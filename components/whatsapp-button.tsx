@@ -4,7 +4,7 @@ import { X } from 'lucide-react';
 
 const openWhatsApp = () => {
   const message = encodeURIComponent('Hi HappyCraft Events! I’d like to know more about your event management services.');
-  const phoneNumber = '+919051618504';
+  const phoneNumber = '+919903622236';
   window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
 };
 
@@ -38,6 +38,7 @@ const WhatsAppButton = () => {
           alt="WhatsApp Logo"
           width="40"
           height="40"
+          draggable={false}
         />
       </button>
     </div>
