@@ -307,6 +307,7 @@ export function GalleryContent() {
                       onClick={() => {
                         setSelectedCategory("All");
                         setSelectedLocation("All");
+                        setSearchQuery("");
                       }}
                       className="cursor-pointer  hover:bg-muted-foreground"
                     >
