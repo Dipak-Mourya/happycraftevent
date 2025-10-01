@@ -19,7 +19,7 @@ export function Footer() {
                 className="object-contain"
                 priority
               />
-              <div className="text-2xl font-bold text-white">
+              <div className="text-xl font-bold text-white">
                 HappyCraft Event
               </div>
             </div>

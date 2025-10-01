@@ -54,7 +54,7 @@ export function Header() {
           <Link href="/" className="flex items-center space-x-2 hover-scale">
             <div
               aria-hidden
-              className="w-15 h-15 bg-primary"
+              className="w-15 h-15 bg-muted-foreground"
               style={{
                 WebkitMaskImage: 'url("/logo/hce.png")',
                 WebkitMaskSize: "contain",
@@ -64,7 +64,9 @@ export function Header() {
                 maskRepeat: "no-repeat",
               }}
             />
-           <div className="text-xl font-bold text-primary">HappyCraft</div>
+            <div className=" mt-3 text-xl font-bold lg:text-xl text-balance mb-3 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+              HappyCraft
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -115,7 +117,7 @@ export function Header() {
                   <div className="flex items-center space-x-2">
                     <div
                       aria-hidden
-                      className="w-10 h-10 bg-primary"
+                      className="w-10 h-10 bg-muted-foreground"
                       style={{
                         WebkitMaskImage: 'url("/logo/hce.png")',
                         WebkitMaskSize: "contain",
@@ -125,7 +127,6 @@ export function Header() {
                         maskRepeat: "no-repeat",
                       }}
                     />
-                    <span>HappyCraft</span>
                   </div>
                 </SheetTitle>
               </SheetHeader>

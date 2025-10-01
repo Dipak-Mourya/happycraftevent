@@ -33,7 +33,7 @@ export function HeroSection() {
 
   return (
     <>
-      <section className="relative py-12 lg:py-20 overflow-hidden bg-gradient-to-br from-background to-muted/30">
+      <section className="relative py-12 lg:py-16 overflow-hidden bg-gradient-to-br from-background to-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Mobile Layout */}
           <div className="lg:hidden">
