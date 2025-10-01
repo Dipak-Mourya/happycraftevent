@@ -38,6 +38,7 @@ const WhatsAppButton = () => {
           alt="WhatsApp Logo"
           width="40"
           height="40"
+          draggable={false}
         />
       </button>
     </div>
