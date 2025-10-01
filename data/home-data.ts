@@ -8,10 +8,10 @@ export const carouselItems = [
   },
   {
     id: 2,
-    title: "Brand Launches",
+    title: "Product Launches",
     description: "Memorable product launches that create lasting impressions",
     image: "home/expertise/e2.jpg",
-    type: "Brand Launch",
+    type: "Product Launch",
   },
   {
     id: 3,
@@ -49,7 +49,7 @@ export const signatureEvents = [
     name: "Product Launch Gala",
     location: "Bengaluru",
     date: "January 2024",
-    type: "Brand Launch",
+    type: "Product Launch",
     image: "/tech-conference-modern-stage.jpg",
   },
   {

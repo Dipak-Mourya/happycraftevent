@@ -139,7 +139,7 @@ export function HeroSection() {
                   </div>
                 </div>
 
-                {/* Fourth Photo - Brand Launch (Bottom Right) */}
+                {/* Fourth Photo - product Launch (Bottom Right) */}
                 <div className="absolute bottom-6 right-8 group">
                   {/* Pin */}
                   <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 z-50">
@@ -152,7 +152,7 @@ export function HeroSection() {
                     <div className="w-full h-full rounded overflow-hidden">
                       <Image
                         src="/home/hanger/h4.jpg"
-                        alt="Brand launch event"
+                        alt="Product launch event"
                         fill
                         className="object-cover hover:scale-110 transition-transform duration-500"
                         draggable={false}
@@ -290,7 +290,7 @@ export function HeroSection() {
                   </div>
                 </div>
 
-                {/* Fourth Photo - Brand Launch (Bottom Right) */}
+                {/* Fourth Photo - Product Launch (Bottom Right) */}
                 <div className="absolute bottom-6 right-16 group">
                   {/* Pin */}
                   <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 z-50">
@@ -303,7 +303,7 @@ export function HeroSection() {
                     <div className="w-full h-full rounded overflow-hidden">
                       <Image
                         src="/home/hanger/h4.jpg"
-                        alt="Brand launch event"
+                        alt="Product launch event"
                         fill
                         className="object-cover hover:scale-110 transition-transform duration-500"
                         draggable={false}

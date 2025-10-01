@@ -50,7 +50,6 @@ export function ContactForm({ SubmitButtonText }: ContactFormProps) {
     "Wedding Planning",
     "Pre-Wedding Shoots",
     "Corporate Events",
-    "Brand Launches",
     "Conferences & Seminars",
     "Product Launches",
     "Artist Management",

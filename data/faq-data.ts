@@ -7,7 +7,7 @@ export const faqs: FAQ[] = [
   {
     question: "What types of events do you manage?",
     answer:
-      "We specialize in corporate events, weddings, brand launches, exhibitions, product activations, conferences, and social gatherings. Our team has experience across all event types and scales.",
+      "We specialize in corporate events, weddings, product launches, exhibitions, product activations, conferences, and social gatherings. Our team has experience across all event types and scales.",
   },
   {
     question: "How far in advance should I book your services?",

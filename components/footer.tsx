@@ -135,7 +135,7 @@ export function Footer() {
                   href="/services"
                   className="text-white/80 hover:text-primary transition-colors text-sm"
                 >
-                  Brand Launches
+                  Product Launches
                 </Link>
               </li>
               <li>

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "event management",
     "corporate events",
     "weddings",
-    "brand launches",
+    "product launches",
     "exhibitions",
     "India",
     "Kolkata",
