@@ -54,7 +54,7 @@ export const galleryImages: GalleryImage[] = [
     src: "home/hanger/h4.jpg",
     alt: "Corporate Seminar with Elegant Setup",
     category: "Corporate Events",
-    event: "Seminar",
+    event: "Professional Seminar Setup with Engaged Audience",
     location: "New Delhi",
   },
 
@@ -80,7 +80,7 @@ export const galleryImages: GalleryImage[] = [
     src: "/gallery/g10.jpg",
     alt: "Grand Wedding Celebration with Elegant Indoor Decor",
     category: "Wedding Planning",
-    event: "Rohit & Ananya Wedding",
+    event: "Luxury Indoor Wedding Celebration",
     location: "Mumbai",
   },
 ];
