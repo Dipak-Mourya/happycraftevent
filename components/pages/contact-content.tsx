@@ -3,6 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import {
   MapPin,
   Mail,
@@ -10,7 +11,6 @@ import {
   Clock,
   Instagram,
   Facebook,
-  X,
 } from "lucide-react";
 import { contactInfo } from "@/data/contact-data";
 import { ContactForm } from "@/components/contact-form";
@@ -111,7 +111,6 @@ export function ContactContent() {
                           <div className="space-y-1 text-muted-foreground text-sm">
                             <p>{contactInfo.businessHours.weekdays}</p>
                             <p>{contactInfo.businessHours.saturday}</p>
-                            <p>{contactInfo.businessHours.sunday}</p>
                           </div>
                         </div>
                       </div>
@@ -121,27 +120,32 @@ export function ContactContent() {
                     <div>
                       <h3 className="font-semibold mb-3">Follow Us</h3>
                       <div className="flex space-x-3">
-                        <Button
-                          variant="outline"
-                          size="icon"
-                          className="cursor-pointer hover:bg-primary"
+                        <Link
+                          href="https://www.instagram.com/_happycraftevents_/"
+                          target="_blank"
+                          className=" hover:text-primary transition-colors block"
                         >
-                          <Instagram className="h-4 w-4" />
-                        </Button>
-                        <Button
-                          variant="outline"
-                          size="icon"
-                          className="cursor-pointer hover:bg-primary"
+                          <Button
+                            variant="outline"
+                            size="icon"
+                            className="cursor-pointer hover:bg-primary"
+                          >
+                            <Instagram className="h-4 w-4" />
+                          </Button>
+                        </Link>
+                        <Link
+                          href="https://www.facebook.com/p/Happycraft-Hospitality-And-Events-100063680694373/"
+                          target="_blank"
+                          className=" hover:text-primary transition-colors block"
                         >
-                          <Facebook className="h-4 w-4" />
-                        </Button>
-                        <Button
-                          variant="outline"
-                          size="icon"
-                          className="cursor-pointer hover:bg-primary"
-                        >
-                          <X className="h-4 w-4" />
-                        </Button>
+                          <Button
+                            variant="outline"
+                            size="icon"
+                            className="cursor-pointer hover:bg-primary"
+                          >
+                            <Facebook className="h-4 w-4" />
+                          </Button>
+                        </Link>
                       </div>
                     </div>
                   </CardContent>
