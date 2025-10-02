@@ -11,7 +11,6 @@ interface GalleryImage {
   category: string;
   event: string;
   location: string;
-  year: string;
 }
 
 interface ImageLightboxProps {
@@ -43,7 +42,7 @@ export function ImageLightbox({
           {currentImage.event} - {currentImage.category}
         </DialogTitle>
         <DialogDescription className="sr-only">
-          {currentImage.category} event in {currentImage.location}, {currentImage.year}. Image {currentIndex + 1} of {images.length}.
+          {currentImage.category} event in {currentImage.location} Image {currentIndex + 1} of {images.length}.
         </DialogDescription>
         
         <div className="relative">
@@ -92,8 +91,7 @@ export function ImageLightbox({
           <div className="p-6 text-white">
             <h3 className="text-xl font-semibold mb-2">{currentImage.event}</h3>
             <p className="text-white/80">
-              {currentImage.category} • {currentImage.location} •{" "}
-              {currentImage.year}
+              {currentImage.category} • {currentImage.location} 
             </p>
           </div>
         </div>

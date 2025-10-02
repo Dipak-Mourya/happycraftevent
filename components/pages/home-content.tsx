@@ -17,7 +17,6 @@ export function HomeContent() {
       <AboutSection />
       <SignatureEventsSection />
       <ServiceLocationsSection />
-      <Testimonials />
       <FAQAccordion />
     </>
   );

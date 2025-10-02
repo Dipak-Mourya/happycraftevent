@@ -12,11 +12,11 @@ import WhatsAppButton from "@/components/whatsapp-button";
 
 export const metadata: Metadata = {
   title: {
-    default: "Happy Craft Event - Top Event Management Company in India",
-    template: "%s | Happy Craft Event",
+    default: "HappyCraft Events - Top Event Management Company in India",
+    template: "%s | HappyCraft Events",
   },
   description:
-    "Begin an extraordinary journey with Happy Craft Event. Design, delight, and inspire with India's premier corporate event management company, where every moment is crafted to perfection.",
+    "Begin an extraordinary journey with HappyCraft Events. Design, delight, and inspire with India's premier corporate event management company, where every moment is crafted to perfection.",
   keywords: [
     "event management",
     "corporate events",
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     "Chennai",
     "Hyderabad",
   ],
-  authors: [{ name: "Happy Craft Event", url: "https://happycraftevent.com" }],
-  creator: "Happy Craft Event",
-  publisher: "Happy Craft Event",
+  authors: [{ name: "HappyCraft Events", url: "https://happycraftevents.com" }],
+  creator: "HappyCraft Events",
+  publisher: "HappyCraft Events",
   robots: {
     index: true,
     follow: true,
@@ -48,30 +48,30 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://happycraftevent.com",
-    siteName: "Happy Craft Event",
-    title: "Happy Craft Event - Top Event Management Company in India",
+    url: "https://happycraftevents.com",
+    siteName: "HappyCraft Events",
+    title: "HappyCraft Events - Top Event Management Company in India",
     description:
-      "Begin an extraordinary journey with Happy Craft Event. Design, delight, and inspire with India's premier corporate event management company.",
+      "Begin an extraordinary journey with HappyCraft Events. Design, delight, and inspire with India's premier corporate event management company.",
     images: [
       {
         url: "/professional-corporate-event-conference.jpg",
         width: 1200,
         height: 630,
-        alt: "Happy Craft Event - Professional Event Management",
+        alt: "HappyCraft Events - Professional Event Management",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Happy Craft Event - Top Event Management Company in India",
+    title: "HappyCraft Events - Top Event Management Company in India",
     description:
-      "Begin an extraordinary journey with Happy Craft Event. Design, delight, and inspire with India's premier corporate event management company.",
+      "Begin an extraordinary journey with HappyCraft Events. Design, delight, and inspire with India's premier corporate event management company.",
     images: ["/professional-corporate-event-conference.jpg"],
-    creator: "@happycraftevent",
+    creator: "@happycraftevents",
   },
   alternates: {
-    canonical: "https://happycraftevent.com",
+    canonical: "https://happycraftevents.com",
   },
   verification: {
     google: "your-google-site-verification-code",

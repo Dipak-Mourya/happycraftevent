@@ -41,7 +41,7 @@ export function Testimonials() {
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Hear from the brands and individuals who have experienced the
-              Happy Craft Event difference.
+              HappyCraft Events difference.
             </p>
           </div>
 

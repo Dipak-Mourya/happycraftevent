@@ -44,7 +44,7 @@ export function GalleryContent() {
         image.event.toLowerCase().includes(searchQuery.toLowerCase()) ||
         image.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
         image.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        image.year.toLowerCase().includes(searchQuery.toLowerCase());
+        image?.year?.toLowerCase().includes(searchQuery.toLowerCase());
 
       return categoryMatch && locationMatch && searchMatch;
     });
@@ -354,7 +354,7 @@ export function GalleryContent() {
                               {image.event}
                             </h3>
                             <p className="text-sm opacity-90">
-                              {image.location} • {image.year}
+                              {image.location} 
                             </p>
                           </div>
                         </div>
