@@ -25,7 +25,7 @@ export function AboutContent() {
                 Crafting Extraordinary Experiences Since 2015
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground text-pretty mb-0">
-                Happy Craft Event has been at the forefront of event management
+                HappyCraft Events has been at the forefront of event management
                 in India, transforming visions into unforgettable experiences
                 with creativity, precision, and passion.
               </p>
@@ -36,40 +36,55 @@ export function AboutContent() {
 
       {/* Founder Section */}
       <ScrollReveal direction="up" delay={200}>
-        <section className="py-8">
+        <section className="py-12">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="order-2 lg:order-1">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+              {/* Text Section */}
+              <div className="order-2 lg:order-1 flex flex-col justify-center space-y-6">
                 <Badge variant="outline" className="mb-4 bg-primary text-white">
                   Our Founder
                 </Badge>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold">
                   Meet Our Visionary Leader
                 </h2>
-                {aboutData.founder.description.map((paragraph, index) => (
-                  <p key={index} className="text-muted-foreground mb-6">
-                    {paragraph}
-                  </p>
-                ))}
-                <div className="space-y-2">
+                {aboutData.founder.description.map((paragraph, index) => {
+                  const highlight = "Mr. Amit Sharma";
+                  if (paragraph.includes(highlight)) {
+                    const parts = paragraph.split(highlight);
+                    return (
+                      <p key={index} className="text-muted-foreground">
+                        {parts[0]}
+                        <strong className="text-primary">{highlight}</strong>
+                        {parts[1]}
+                      </p>
+                    );
+                  }
+                  return (
+                    <p key={index} className="text-muted-foreground">
+                      {paragraph}
+                    </p>
+                  );
+                })}
+                <div className="space-y-1">
                   <p className="font-semibold">{aboutData.founder.name}</p>
                   <p className="text-muted-foreground">
                     {aboutData.founder.title}
                   </p>
-                  <p className="text-sm text-muted-foreground">
-                    {aboutData.founder.qualification}
-                  </p>
                 </div>
               </div>
-              <div className="order-1 lg:order-2">
-                <Image
-                  src={aboutData.founder.image}
-                  alt={`${aboutData.founder.name}, Founder of Happy Craft Event`}
-                  className="rounded-lg shadow-lg w-full h-auto"
-                  draggable={false}
-                  width={450}
-                  height={350}
-                />
+
+              {/* Image Section */}
+              <div className="order-1 lg:order-2 flex justify-center">
+                <div className="w-full lg:w-[90%] relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+                  <Image
+                    src={aboutData.founder.image}
+                    alt={`${aboutData.founder.name}, Founder of HappyCraft Event`}
+                    className="object-cover"
+                    draggable={false}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -83,7 +98,7 @@ export function AboutContent() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="flex justify-center">
                 <Image
-                  src="/tech-conference-modern-stage.jpg"
+                  src="/home/other/team.jpg"
                   alt="Our Story"
                   className="rounded-lg shadow-lg w-full h-auto"
                   draggable={false}

@@ -10,14 +10,14 @@ export const testimonials: Testimonial[] = [
     id: 1,
     name: "Rajesh Kumar",
     content:
-      "Happy Craft Event transformed our annual conference into an unforgettable experience. Their attention to detail and professional execution exceeded our expectations.",
+      "HappyCraft Events transformed our annual conference into an unforgettable experience. Their attention to detail and professional execution exceeded our expectations.",
     rating: 5,
   },
   {
     id: 2,
     name: "Priya Sharma",
     content:
-      "The team at Happy Craft Event delivered a flawless product launch event. Every aspect was perfectly coordinated, from venue setup to guest management.",
+      "The team at HappyCraft Events delivered a flawless product launch event. Every aspect was perfectly coordinated, from venue setup to guest management.",
     rating: 4,
   },
   {

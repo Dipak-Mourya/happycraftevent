@@ -1,103 +1,96 @@
 export interface GalleryImage {
-  id: number
-  src: string
-  alt: string
-  category: string
-  event: string
-  location: string
-  year: string
+  id: number;
+  src: string;
+  alt: string;
+  category: string;
+  event: string;
+  location: string;
+  year?: string;
 }
 
 export const galleryImages: GalleryImage[] = [
   {
     id: 1,
-    src: "/tech-conference-modern-stage.jpg",
-    alt: "Corporate Conference in Mumbai",
-    category: "Corporate Event",
-    event: "Tech Summit 2024",
-    location: "Mumbai",
-    year: "2024",
+    src: "/gallery/g9.jpg",
+    alt: "Luxury Wedding in Kolkata",
+    category: "Wedding Planning",
+    event: "Royal Wedding Ceremony",
+    location: "Jaipur",
   },
   {
     id: 2,
-    src: "/tech-conference-modern-stage.jpg",
-    alt: "Luxury Wedding in Kolkata",
-    category: "Wedding",
-    event: "Royal Wedding Ceremony",
-    location: "Kolkata",
-    year: "2024",
-  },
-  {
-    id: 3,
-    src: "/tech-conference-modern-stage.jpg",
+    src: "home/expertise/e2.jpg",
     alt: "Product Launch Event in Bengaluru",
     category: "Product Launch",
     event: "Product Launch Gala",
-    location: "Bengaluru",
-    year: "2024",
+    location: "Kolkata",
+  },
+  {
+    id: 3,
+    src: "/gallery/g3.jpg",
+    alt: "Celebrity Showcase in Pune",
+    category: "Artist Management",
+    event: "Celebrity Showcase",
+    location: "Pune",
   },
   {
     id: 4,
-    src: "/tech-conference-modern-stage.jpg",
-    alt: "Exhibition Booth in Delhi",
-    category: "Exhibition",
-    event: "Trade Show Participation",
-    location: "New Delhi",
-    year: "2023",
+    src: "/gallery/g1.jpg",
+    alt: "Strategic Growth Conference",
+    category: "Corporate Events",
+    event: "Strategic Growth Conference",
+    location: "Bengaluru",
   },
   {
     id: 5,
-    src: "/tech-conference-modern-stage.jpg",
-    alt: "Wedding Reception in Chennai",
-    category: "Wedding",
-    event: "Grand Reception",
-    location: "Chennai",
-    year: "2023",
+    src: "/gallery/g4.jpg",
+    alt: "Artist Performance at Corporate Event",
+    category: "Artist Management",
+    event: "Live Performance by Renowned Artists",
+    location: "Mumbai",
   },
   {
     id: 6,
-    src: "/tech-conference-modern-stage.jpg",
-    alt: "Corporate Retreat in Goa",
-    category: "Corporate Event",
-    event: "Annual Team Retreat",
-    location: "Goa",
-    year: "2023",
+    src: "home/hanger/h4.jpg",
+    alt: "Corporate Seminar with Elegant Setup",
+    category: "Corporate Events",
+    event: "Professional Seminar Setup with Engaged Audience",
+    location: "New Delhi",
   },
+
   {
     id: 7,
-    src: "/tech-conference-modern-stage.jpg",
-    alt: "Product Activation in Hyderabad",
-    category: "Product Activation",
-    event: "Consumer Engagement Campaign",
+    src: "/gallery/g6.jpg",
+    alt: "Live Artist Performance with Dynamic Stage Lighting",
+    category: "Artist Management",
+    event: "Bollywood Night",
     location: "Hyderabad",
-    year: "2023",
   },
   {
     id: 8,
-    src: "/tech-conference-modern-stage.jpg",
-    alt: "Award Ceremony in Pune",
-    category: "Corporate Event",
-    event: "Excellence Awards Night",
-    location: "Pune",
-    year: "2023",
+    src: "/gallery/g5.jpg",
+    alt: "Pre-Wedding Shoot",
+    category: "Pre-Wedding Shoot",
+    event: "Pre-Wedding Shoot",
+    location: "Kolkata",
   },
+
   {
     id: 9,
-    src: "/tech-conference-modern-stage.jpg",
-    alt: "Cultural Festival in Jaipur",
-    category: "Social Gathering",
-    event: "Heritage Festival",
-    location: "Jaipur",
-    year: "2022",
+    src: "/gallery/g10.jpg",
+    alt: "Grand Wedding Celebration with Elegant Indoor Decor",
+    category: "Wedding Planning",
+    event: "Luxury Indoor Wedding Celebration",
+    location: "Mumbai",
   },
-]
+];
 
 export const galleryCategories = [
   "All",
-  "Corporate Event",
-  "Wedding",
-  "Product Launch",
-  "Exhibition",
-  "Product Activation",
-  "Social Gathering",
-]
+  "Wedding Planning",
+  "Pre-Wedding Shoots",
+  "Corporate Events",
+  "Conferences & Seminars",
+  "Product Launches",
+  "Artist Management",
+];

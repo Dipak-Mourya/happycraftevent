@@ -225,8 +225,8 @@ export function Footer() {
                 </div>
                 <div className="text-sm text-left">
                   <p>
-                    Shakespeare 9th Floor, Ps Arcadia Central 4A, Camac St,
-                    Elgin, Kolkata, WB 700017
+                    P-43, Sec-B, Metropolitan, Tangra, Kolkata, West Bengal
+                    700015
                   </p>
                 </div>
               </div>
@@ -251,7 +251,7 @@ export function Footer() {
                   href="tel:+919903622236"
                   className="text-sm hover:text-primary transition-colors"
                 >
-                  +91 99036 22236
+                  +91 9903622236
                 </Link>
               </div>
             </div>

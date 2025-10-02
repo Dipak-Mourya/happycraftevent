@@ -12,7 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { RotateCcw, Filter } from "lucide-react";
-import { galleryImages, galleryCategories } from "@/data/gallery-data";
+import { galleryImages } from "@/data/gallery-data";
 import Image from "next/image";
 import { ScrollReveal } from "../scroll-reveal";
 
@@ -30,7 +30,12 @@ export function GalleryContent() {
     ).sort();
     return ["All", ...locations];
   }, []);
-
+ const uniqueCategories = useMemo(() => {
+    const categories = Array.from(
+      new Set(galleryImages.map((img) => img.category))
+    ).sort();
+    return ["All", ...categories];
+  }, []);
   // Filter images based on all selected filters and search query
   const filteredImages = useMemo(() => {
     return galleryImages.filter((image) => {
@@ -44,7 +49,7 @@ export function GalleryContent() {
         image.event.toLowerCase().includes(searchQuery.toLowerCase()) ||
         image.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
         image.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        image.year.toLowerCase().includes(searchQuery.toLowerCase());
+        image?.year?.toLowerCase().includes(searchQuery.toLowerCase());
 
       return categoryMatch && locationMatch && searchMatch;
     });
@@ -218,7 +223,7 @@ export function GalleryContent() {
                     </SelectValue>
                   </SelectTrigger>
                   <SelectContent>
-                    {galleryCategories.map((category) => (
+                    {uniqueCategories.map((category) => (
                       <SelectItem
                         key={category}
                         value={category}
@@ -354,7 +359,7 @@ export function GalleryContent() {
                               {image.event}
                             </h3>
                             <p className="text-sm opacity-90">
-                              {image.location} • {image.year}
+                              {image.location} 
                             </p>
                           </div>
                         </div>

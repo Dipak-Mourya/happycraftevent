@@ -117,9 +117,8 @@ export function ContactForm({ SubmitButtonText }: ContactFormProps) {
         },
         body: JSON.stringify({
           ...formData,
-          access_key: "0ff075dc-bcae-4fd7-bald-d30a4995e66f",
+          access_key: "0ff075dc-bcae-4fd7-ba1d-d30a4995e66f",
           subject: "New Event Proposal Submission",
-          botcheck: "",
         }),
       });
 
@@ -148,7 +147,7 @@ export function ContactForm({ SubmitButtonText }: ContactFormProps) {
           title: "Error",
           description:
             json.message || "Something went wrong. Please try again.",
-          variant: "destructive",
+          variant: "default",
         });
       }
     } catch (error) {

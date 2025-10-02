@@ -1,43 +1,44 @@
 export const aboutData = {
   founder: {
-    name: "Rajesh Sharma",
-    title: "Founder & CEO, Happy Craft Event",
-    qualification: "MBA in Marketing, 15+ years in Event Management",
-    image: "/tech-conference-modern-stage.jpg",
+    name: "Mr. Amit Sharma",
+    title: "Founder & CEO, HappyCraft Events",
+    image: "/home/other/founder.jpg",
     description: [
-      "Founded by Rajesh Sharma, a visionary entrepreneur with over 15 years of experience in the event management industry. His passion for creating memorable experiences and attention to detail has been the driving force behind Happy Craft Event's success.",
-      "Under his leadership, the company has grown from a small startup to India's premier event management company, serving clients across multiple cities and industries."
-    ]
+      "Founded by Mr. Amit Sharma, a visionary entrepreneur with over 12 years of experience in the event management industry. His passion for creating memorable experiences and attention to detail has been the driving force behind HappyCraft Events's success.",
+      "Under his leadership, the company has grown from a small startup to India's premier event management company, serving clients across multiple cities and industries. Over the years, HappyCraft Event has successfully organized events featuring top Bollywood celebrities, including award nights, movie premieres, and private celebrity gatherings, ensuring every occasion is glamorous and unforgettable.",
+      "The company has been entrusted with high-profile corporate events, international film festivals, and exclusive celebrity parties, consistently delivering excellence and innovation.",
+    ],
   },
   story: [
-    "What started as a small event planning venture in Kolkata has evolved into one of India's most trusted event management companies. Our journey began with a simple belief: every event, no matter how big or small, deserves to be extraordinary.",
-    "Over the years, we've had the privilege of working with diverse clients, from intimate family celebrations to large-scale corporate conferences. Each event has taught us something new and helped us refine our craft.",
-    "Today, Happy Craft Event stands as a testament to what passion, dedication, and unwavering commitment to excellence can achieve. We continue to push boundaries and set new standards in the event management industry."
+    "What began as a humble event planning venture in Kolkata has blossomed into one of India's most trusted and innovative event management companies. From the very start, our belief has been simple: every event, no matter the size, deserves to be extraordinary.",
+    "Over the years, we've had the honor of crafting experiences for a wide range of clients—from intimate family celebrations to grand corporate conferences. Each event has been a learning journey, helping us perfect our craft and elevate the art of event management.",
+    "Today, HappyCraft Events stands as a symbol of passion, dedication, and an unwavering commitment to excellence. We continue to push creative boundaries, set new industry standards, and make every event a truly unforgettable experience.",
   ],
+
   stats: [
     {
       icon: "Calendar",
-      value: 9,
+      value: 12,
       suffix: "+",
-      label: "Years Experience"
+      label: "Years Experience",
     },
     {
-      icon: "Users", 
-      value: 850,
+      icon: "Gift",
+      value: 350,
       suffix: "+",
-      label: "Events Completed"
+      label: "Events Completed",
     },
     {
       icon: "Trophy",
       value: 95,
-      suffix: "%", 
-      label: "Client Retention"
+      suffix: "%",
+      label: "Client Retention",
     },
     {
-      icon: "Award",
-      value: 8,
+      icon: "Users",
+      value: 60,
       suffix: "+",
-      label: "Awards Won"
-    }
-  ]
-}
+      label: "Team Strength",
+    },
+  ],
+};
